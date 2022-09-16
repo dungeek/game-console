@@ -33,7 +33,7 @@ void Setup()
     score = 0;
 }
 
-void clearScreen ()
+void ClearScreen ()
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD coordScreen = {0, 0};
@@ -194,11 +194,11 @@ int main ()
     Setup();
     while (!gameOver)
     {
-        clearScreen();
+        ClearScreen();
         Draw();
         Input();
         Logic();
-        Sleep(10);
+        Sleep(20);
     }
 
     return 0;
